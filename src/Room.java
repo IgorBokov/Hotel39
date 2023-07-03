@@ -1,15 +1,15 @@
-public class Room {
+public class Room{
     private int place;
     private int number;
-    private boolean conditionet;
+    private boolean conditioner;
     private boolean wc;
     private boolean tv;
     private boolean reserved;
 
-    public Room(int number, int place, boolean conditionet, boolean wc, boolean tv) {
+    public Room(int number, int place, boolean conditioner, boolean wc, boolean tv) {
         this.place = place;
         this.number = number;
-        this.conditionet = conditionet;
+        this.conditioner = conditioner;
         this.wc = wc;
         this.tv = tv;
         this.reserved = false;
@@ -39,12 +39,12 @@ public class Room {
         this.number = number;
     }
 
-    public boolean isConditionet() {
-        return conditionet;
+    public boolean isConditioner() {
+        return conditioner;
     }
 
-    public void setConditionet(boolean conditionet) {
-        this.conditionet = conditionet;
+    public void setConditioner(boolean conditioner) {
+        this.conditioner = conditioner;
     }
 
     public boolean isWc() {
