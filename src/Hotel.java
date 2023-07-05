@@ -63,13 +63,18 @@ public class Hotel {
                 selectOptions[3] = correctNum();
         }
         System.out.println("Ваш выбор " + Arrays.toString(selectOptions));
+        boolean message = false;
         for (Room room : rooms) {
             if (room.getPlace() == selectOptions[0] &&
                     !room.isReserved() && (selectOptions[1] == 1) == room.isConditioner()
                     && (selectOptions[2] == 1) == room.isWc() &&
                     (selectOptions[3] == 1) == room.isTv()) {
                 System.out.println("Комната " + room.getNumber());
+                message = true;
             }
+        }
+        if (!message) {
+            System.out.println("Такой комнаты нет");
         }
     }
 
