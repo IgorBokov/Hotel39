@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hotel {
-    private Room[] rooms;
+    private final Room[] rooms;
 
     public Hotel(Room[] rooms) {
         this.rooms = rooms;
@@ -41,28 +41,18 @@ public class Hotel {
                 4. Наличие телевизора.
                 """);
         Integer[] selectOptions = new Integer[4];
-        Scanner scanner = new Scanner(System.in);
-        int num = correctNum();
 
-        while (num != 1) {
-            System.out.println("Введите данные начиная с первого пункта");
-            num = correctNum();
-        }
-        switch (num) {
-            case 1:
-                System.out.println("Укажите количество спальных мест от 1 до 4");
-                selectOptions[0] = correctNum();
-            case 2:
-                System.out.println("Наличие кондиционера 1 - да , 0 - нет.");
-                selectOptions[1] = correctNum();
-            case 3:
-                System.out.println("Наличие туалета 1 - да , 0 - нет.");
-                selectOptions[2] = correctNum();
-            case 4:
-                System.out.println("Наличие телевизора 1 - да , 0 - нет.");
-                selectOptions[3] = correctNum();
-        }
+        System.out.println("Укажите количество спальных мест от 1 до 4");
+        selectOptions[0] = correctNum();
+        System.out.println("Наличие кондиционера 1 - да , 0 - нет.");
+        selectOptions[1] = correctNum();
+        System.out.println("Наличие туалета 1 - да , 0 - нет.");
+        selectOptions[2] = correctNum();
+        System.out.println("Наличие телевизора 1 - да , 0 - нет.");
+        selectOptions[3] = correctNum();
+
         System.out.println("Ваш выбор " + Arrays.toString(selectOptions));
+
         boolean message = false;
         for (Room room : rooms) {
             if (room.getPlace() == selectOptions[0] &&
