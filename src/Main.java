@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -21,6 +23,12 @@ public class Main {
                 new Room(33, 3, true, true, true)
         };
         Hotel hotel = new Hotel(rooms);
+        System.out.println("""
+                Введите доступные команды :
+                /getFreeRooms - показывает все свободные комнаты (номера)
+                /reserve - бронирует комнату
+                /getFreeRooms -f - выбор доступных опций в комнате
+                """);
         Scanner scanner = new Scanner(System.in);
         while (true){
             String command = scanner.nextLine();

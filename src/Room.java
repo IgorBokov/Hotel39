@@ -15,6 +15,9 @@ public class Room{
         this.reserved = false;
     }
 
+    public Room() {
+    }
+
     public boolean isReserved() {
         return reserved;
     }
