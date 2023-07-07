@@ -38,7 +38,7 @@ public class Main {
                 System.out.println("Введите номер комнаты для бронирования");
                 int num = Integer.parseInt(scanner.nextLine());
                 hotel.reserve(num);
-            } else if (command.equals("/getFreeRooms -f")) {
+            } else if (command.contains("/getFreeRooms")) {
                 hotel.getFreeRoomsFilter();
             }
         }
